@@ -1,0 +1,11 @@
+mood,sleep_hours,screen_time,activity_level,stress_level
+happy,8,2,high,low
+sad,5,6,low,high
+angry,6,5,medium,medium
+happy,7,3,high,low
+sad,4,7,low,high
+happy,8,2,medium,low
+angry,5,6,low,high
+sad,6,5,low,high
+happy,7,3,high,low
+angry,6,4,medium,medium
