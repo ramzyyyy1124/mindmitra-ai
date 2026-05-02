@@ -56,3 +56,29 @@ export const fetchActivityLogs = async (childId, token) => {
   if (!response.ok) throw new Error('Failed to fetch activity logs');
   return response.json();
 };
+
+export const addChildAPI = async (childData, token) => {
+  const response = await fetch(`${API_URL}/api/children`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify(childData)
+  });
+  if (!response.ok) throw new Error('Failed to add child');
+  return response.json();
+};
+
+export const addActivityLogAPI = async (childId, activityData, token) => {
+  const response = await fetch(`${API_URL}/api/activity/${childId}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    },
+    body: JSON.stringify(activityData)
+  });
+  if (!response.ok) throw new Error('Failed to add activity log');
+  return response.json();
+};

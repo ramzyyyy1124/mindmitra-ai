@@ -3,6 +3,8 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from database import models, schemas, database
 from auth import verify_password, get_password_hash, create_access_token, ACCESS_TOKEN_EXPIRE_MINUTES
+import auth
+from jose import jwt
 from datetime import timedelta
 
 from fastapi.middleware.cors import CORSMiddleware
